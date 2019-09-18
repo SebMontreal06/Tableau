@@ -29,7 +29,6 @@ server.auth.sign_out()
 ##For Each Site
 for site in all_sites:
 
-    if site.content_url != "RonSite" and site.content_url != "ChaddSandBox" and site.content_url != "sales":
         tableau_auth = TSC.TableauAuth('login', 'password',site.content_url)
         server.auth.sign_in(tableau_auth)
         all_workbooks = list(TSC.Pager(server.workbooks))
